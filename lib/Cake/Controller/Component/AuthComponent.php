@@ -266,7 +266,7 @@ class AuthComponent extends Component {
 		}
 
 		$methods = array_flip($controller->methods);
-		$action = isset($controller->request->params['action']) ? $controller->request->params['action'] : null;
+		$action = $controller->request->params['action'];
 
 		$isMissingAction = (
 			$controller->scaffold === false &&
